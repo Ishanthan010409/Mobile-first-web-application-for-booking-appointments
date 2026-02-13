@@ -1,0 +1,70 @@
+/* ===== CONFIRMATION SCREEN ===== */
+.confirmation-content {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.confirmation-icon {
+    width: 100px;
+    height: 100px;
+    background-color: #D1FAE5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+    color: var(--success);
+    font-size: 48px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.summary-item:last-child {
+    border-bottom: none;
+}
+
+.summary-label {
+    color: var(--text-light);
+}
+
+.summary-value {
+    font-weight: 600;
+}
+
+.summary-total {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.reminder-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.reminder-icon {
+    color: var(--primary);
+    font-size: 20px;
+    margin-top: 2px;
+}
+
+.reminder-title {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.reminder-desc {
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.share-btn {
+    margin-top: 12px;
+}

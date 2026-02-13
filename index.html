@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AppointmentEase | Book Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components/buttons.css">
+    <link rel="stylesheet" href="css/components/cards.css">
+    <link rel="stylesheet" href="css/components/calendar.css">
+    <link rel="stylesheet" href="css/components/navigation.css">
+    <link rel="stylesheet" href="css/screens/onboarding.css">
+    <link rel="stylesheet" href="css/screens/login.css">
+    <link rel="stylesheet" href="css/screens/home.css">
+    <link rel="stylesheet" href="css/screens/datetime.css">
+    <link rel="stylesheet" href="css/screens/confirmation.css">
+</head>
+<body>
+    <!-- Onboarding Screen -->
+    <div id="onboarding-screen" class="screen container active">
+        <div class="onboarding-slide" id="onboarding-slide-1">
+            <div class="onboarding-image">
+                <i class="fas fa-calendar-check"></i>
+            </div>
+            <h1>Book Appointments Easily</h1>
+            <p>Schedule appointments with your preferred service providers in just a few taps.</p>
+            <div class="slide-indicators">
+                <span class="indicator active"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+            </div>
+            <div class="bottom-nav">
+                <button class="btn btn-outline" onclick="skipOnboarding()">Skip</button>
+                <button class="btn btn-primary" onclick="nextOnboardingSlide()">Next</button>
+            </div>
+        </div>
+        
+        <div class="onboarding-slide" id="onboarding-slide-2" style="display: none;">
+            <div class="onboarding-image">
+                <i class="fas fa-user-md"></i>
+            </div>
+            <h1>Choose Specialists</h1>
+            <p>Select from our verified professionals with ratings and reviews.</p>
+            <div class="slide-indicators">
+                <span class="indicator"></span>
+                <span class="indicator active"></span>
+                <span class="indicator"></span>
+            </div>
+            <div class="bottom-nav">
+                <button class="btn btn-outline" onclick="skipOnboarding()">Skip</button>
+                <button class="btn btn-primary" onclick="nextOnboardingSlide()">Next</button>
+            </div>
+        </div>
+        
+        <div class="onboarding-slide" id="onboarding-slide-3" style="display: none;">
+            <div class="onboarding-image">
+                <i class="fas fa-clock"></i>
+            </div>
+            <h1>Pick Your Time</h1>
+            <p>Choose from available time slots that fit your schedule.</p>
+            <div class="slide-indicators">
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+                <span class="indicator active"></span>
+            </div>
+            <div class="bottom-nav">
+                <button class="btn btn-outline" onclick="skipOnboarding()">Skip</button>
+                <button class="btn btn-primary" onclick="goToLogin()">Get Started</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Login Screen -->
+    <div id="login-screen" class="screen container">
+        <div class="header">
+            <div class="logo">
+                <div class="logo-circle">AE</div>
+                <span>AppointmentEase</span>
+            </div>
+        </div>
+        
+        <div class="login-content">
+            <h1>Welcome Back</h1>
+            <p class="subtitle">Sign in to book your next appointment</p>
+            
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="your@email.com">
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password">
+            </div>
+            
+            <div class="forgot-password">
+                <a href="#" style="color: var(--primary); font-weight: 600; text-decoration: none;">Forgot Password?</a>
+            </div>
+            
+            <button class="btn btn-primary" onclick="goToHome()">Sign In</button>
+            
+            <div class="divider"><span>or continue with</span></div>
+            
+            <div class="login-options">
+                <button class="btn btn-secondary">
+                    <i class="fab fa-google"></i>
+                    Google
+                </button>
+                <button class="btn btn-secondary">
+                    <i class="fab fa-apple"></i>
+                    Apple ID
+                </button>
+            </div>
+            
+            <div class="signup-link">
+                <span class="text-light">Don't have an account? </span>
+                <a href="#" class="primary-link">Sign Up</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Home / Service Selection Screen -->
+    <div id="home-screen" class="screen container">
+        <div class="header">
+            <div class="logo">
+                <div class="logo-circle">AE</div>
+                <span>AppointmentEase</span>
+            </div>
+            <div class="avatar">km</div>
+        </div>
+        
+        <div class="greeting">
+            <h1>Hi, Kumar</h1>
+            <p class="subtitle">What service are you looking for today?</p>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress-step completed">1</div>
+            <div class="progress-step active">2</div>
+            <div class="progress-step">3</div>
+            <div class="progress-step">4</div>
+        </div>
+        
+        <h2>Select Service</h2>
+        
+        <div class="services-grid">
+            <div class="card service-card" onclick="selectService('haircut')">
+                <div class="service-icon">
+                    <i class="fas fa-cut"></i>
+                </div>
+                <h3>Haircut</h3>
+                <p class="service-price">500 - 45 min</p>
+            </div>
+            
+            <div class="card service-card" onclick="selectService('massage')">
+                <div class="service-icon">
+                    <i class="fas fa-spa"></i>
+                </div>
+                <h3>Massage</h3>
+                <p class="service-price">750 - 60 min</p>
+            </div>
+            
+            <div class="card service-card" onclick="selectService('consultation')">
+                <div class="service-icon">
+                    <i class="fas fa-user-md"></i>
+                </div>
+                <h3>Consultation</h3>
+                <p class="service-price">1200 - 30 min</p>
+            </div>
+            
+            <div class="card service-card" onclick="selectService('fitness')">
+                <div class="service-icon">
+                    <i class="fas fa-dumbbell"></i>
+                </div>
+                <h3>Fitness Training</h3>
+                <p class="service-price">900 - 60 min</p>
+            </div>
+        </div>
+        
+        <h2>Select Specialist</h2>
+        
+        <div class="specialist-list">
+            <div class="card specialist-card" onclick="selectSpecialist('alex')">
+                <img src="https://tse2.mm.bing.net/th/id/OIP.hio7AbP2xZ5yadc7gRJcqwHaHa?pid=Api&P=0&h=220" alt="Ravi kumar" class="specialist-avatar">
+                <div class="specialist-info">
+                    <h3>Ravi kumar</h3>
+                    <div class="specialist-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span class="rating-count">5.7 (128)</span>
+                    </div>
+                    <p class="specialist-desc">Senior Stylist • 4 yrs experience</p>
+                </div>
+                <i class="fas fa-chevron-right chevron-icon"></i>
+            </div>
+            
+            <div class="card specialist-card" onclick="selectSpecialist('sarah')">
+                <img src="https://tse1.mm.bing.net/th/id/OIP.i9jT1vynf8q8jgWwAOre8AHaFS?pid=Api&P=0&h=220" alt="Antony Sofiya" class="specialist-avatar">
+                <div class="specialist-info">
+                    <h3>Antony Sofiya</h3>
+                    <div class="specialist-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span class="rating-count">5.0 (94)</span>
+                    </div>
+                    <p class="specialist-desc">Massage Therapist • 3 yrs experience</p>
+                </div>
+                <i class="fas fa-chevron-right chevron-icon"></i>
+            </div>
+        </div>
+        
+        <div class="bottom-nav">
+            <button class="btn btn-secondary" onclick="goToLogin()">
+                <i class="fas fa-arrow-left"></i>
+                Back
+            </button>
+            <button class="btn btn-primary" onclick="goToDateTime()">
+                Continue
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Date & Time Selection Screen -->
+    <div id="datetime-screen" class="screen container">
+        <div class="header">
+            <div class="logo">
+                <div class="logo-circle">AE</div>
+                <span>AppointmentEase</span>
+            </div>
+            <div class="avatar">JS</div>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress-step completed">1</div>
+            <div class="progress-step completed">2</div>
+            <div class="progress-step active">3</div>
+            <div class="progress-step">4</div>
+        </div>
+        
+        <h2>Select Date & Time</h2>
+        <p class="subtitle">Ravi Kumar • Haircut • 700</p>
+        
+        <div class="card calendar-card">
+            <div class="calendar-header">
+                <h3>April 2024</h3>
+                <div class="calendar-nav">
+                    <button class="btn btn-icon" onclick="prevMonth()">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="btn btn-icon" onclick="nextMonth()">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="calendar-weekdays">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+            
+            <div class="calendar-days" id="calendar-days">
+                <!-- Calendar days will be populated by JavaScript -->
+            </div>
+        </div>
+        
+        <h3 class="time-slots-title">Available Time Slots</h3>
+        
+        <div class="time-slots" id="time-slots">
+            <!-- Time slots will be populated by JavaScript -->
+        </div>
+        
+        <div class="bottom-nav">
+            <button class="btn btn-secondary" onclick="goToHome()">
+                <i class="fas fa-arrow-left"></i>
+                Back
+            </button>
+            <button class="btn btn-primary" onclick="goToConfirmation()">
+                Continue
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Confirmation Screen -->
+    <div id="confirmation-screen" class="screen container">
+        <div class="header">
+            <div class="logo">
+                <div class="logo-circle">AE</div>
+                <span>AppointmentEase</span>
+            </div>
+            <div class="avatar">JS</div>
+        </div>
+        
+        <div class="confirmation-content">
+            <div class="confirmation-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            
+            <h1>Appointment Confirmed!</h1>
+            <p>Your appointment has been successfully scheduled. You'll receive a confirmation email shortly.</p>
+            
+            <div class="card confirmation-details">
+                <div class="summary-item">
+                    <span class="summary-label">Service</span>
+                    <span class="summary-value">Haircut</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-label">Specialist</span>
+                    <span class="summary-value">Ravi kumar</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-label">Date & Time</span>
+                    <span class="summary-value">April 20, 2025 • 2:30 PM</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-label">Duration</span>
+                    <span class="summary-value">45 minutes</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-label">Location</span>
+                    <span class="summary-value">Vavuniya,Srilanka </span>
+                </div>
+                <div class="summary-item summary-total">
+                    <span>Total</span>
+                    <span>Rs. 600</span>
+                </div>
+            </div>
+            
+            <div class="card reminders-card">
+                <h3>Reminders</h3>
+                <div class="reminder-item">
+                    <i class="fas fa-bell reminder-icon"></i>
+                    <div>
+                        <div class="reminder-title">24-hour reminder</div>
+                        <div class="reminder-desc">You'll receive a reminder before your appointment</div>
+                    </div>
+                </div>
+                <div class="reminder-item">
+                    <i class="fas fa-calendar-plus reminder-icon"></i>
+                    <div>
+                        <div class="reminder-title">Added to calendar</div>
+                        <div class="reminder-desc">This appointment has been added to your calendar</div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="btn btn-primary" onclick="goToHome()">
+                <i class="fas fa-calendar-alt"></i>
+                View My Appointments
+            </button>
+            
+            <button class="btn btn-outline share-btn">
+                <i class="fas fa-share-alt"></i>
+                Share Details
+            </button>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/screens/onboarding.js"></script>
+    <script src="js/screens/home.js"></script>
+    <script src="js/screens/datetime.js"></script>
+    <script src="js/screens/confirmation.js"></script>
+    <script src="js/components/calendar.js"></script>
+    <script src="js/components/navigation.js"></script>
+</body>
+</html>

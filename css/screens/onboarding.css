@@ -1,0 +1,40 @@
+/* ===== ONBOARDING SCREEN ===== */
+.onboarding-slide {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.onboarding-image {
+    width: 240px;
+    height: 240px;
+    margin: 0 auto 32px;
+    background-color: var(--primary-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 100px;
+}
+
+.slide-indicators {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.indicator {
+    width: 8px;
+    height: 8px;
+    background-color: var(--border);
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.indicator.active {
+    background-color: var(--primary);
+    width: 24px;
+    border-radius: 4px;
+}

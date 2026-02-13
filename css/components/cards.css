@@ -1,0 +1,108 @@
+/* ===== CARD STYLES ===== */
+.card {
+    background-color: var(--card);
+    border-radius: var(--radius);
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow);
+    border: 2px solid var(--border);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.service-card {
+    text-align: center;
+    padding: 20px 12px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.service-card.selected {
+    border-color: var(--primary);
+    background-color: var(--primary-light);
+}
+
+.service-icon {
+    width: 56px;
+    height: 56px;
+    background-color: var(--primary-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+    color: var(--primary);
+    font-size: 24px;
+}
+
+.service-price {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 0;
+}
+
+.specialist-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.specialist-card.selected {
+    border-color: var(--primary);
+    background-color: var(--primary-light);
+}
+
+.specialist-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.specialist-info {
+    flex: 1;
+}
+
+.specialist-rating {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    color: var(--warning);
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.rating-count {
+    color: var(--text-light);
+    margin-left: 4px;
+}
+
+.specialist-desc {
+    font-size: 14px;
+    margin-bottom: 0;
+    color: var(--text-light);
+}
+
+.chevron-icon {
+    color: var(--text-light);
+}
+
+.calendar-card {
+    padding: 16px;
+}
+
+.confirmation-details {
+    margin: 32px 0;
+    text-align: left;
+}
+
+.reminders-card {
+    margin-bottom: 24px;
+    text-align: left;
+}

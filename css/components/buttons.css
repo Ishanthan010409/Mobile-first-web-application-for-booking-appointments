@@ -1,0 +1,93 @@
+/* ===== BUTTON STYLES ===== */
+.btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    padding: 14px 24px !important;
+    border-radius: var(--radius) !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    border: 2px solid transparent !important;
+    cursor: pointer !important;
+    transition: var(--transition) !important;
+    width: 100% !important;
+    text-decoration: none !important;
+    position: relative !important;
+    z-index: 999 !important;
+    margin: 0 !important;
+    line-height: 1 !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+}
+
+.btn-primary {
+    background-color: var(--primary) !important;
+    color: white !important;
+    border-color: var(--primary) !important;
+}
+
+.btn-primary:hover {
+    background-color: #4338CA !important;
+    border-color: #4338CA !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.3);
+}
+
+.btn-secondary {
+    background-color: var(--primary-light) !important;
+    color: var(--primary) !important;
+    border-color: var(--primary-light) !important;
+}
+
+.btn-secondary:hover {
+    background-color: #E0E7FF !important;
+    border-color: #E0E7FF !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.1);
+}
+
+.btn-outline {
+    background-color: transparent !important;
+    color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-light) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.1);
+}
+
+.btn-icon {
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 50% !important;
+    padding: 0 !important;
+    background-color: var(--primary-light) !important;
+    color: var(--primary) !important;
+    border-color: var(--primary-light) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.btn-icon:hover {
+    background-color: #E0E7FF !important;
+    transform: scale(1.05);
+}
+
+.btn:active {
+    transform: translateY(0) !important;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.btn i {
+    font-size: 18px;
+}
