@@ -230,8 +230,4 @@ If you encounter any issues or have questions:
 
 <p align="center">Made with ❤️ for easy appointment booking</p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Version-1.0.0-blue.svg" alt="Version">
-  <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License">
-  <img src="https://img.shields.io/badge/Platform-Web-orange.svg" alt="Platform">
-</p>
+
