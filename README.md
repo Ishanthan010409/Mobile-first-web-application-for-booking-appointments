@@ -114,7 +114,7 @@ Welcome slides introducing the app's key features:
 - Verified specialists selection
 - Flexible time slot selection
 
-![Onboarding Screen](images/screenshot-onboarding.png)
+![Onboarding Screen](images/1.PNG)
 
 ### 2. Login Screen
 Authentication options:
@@ -122,28 +122,29 @@ Authentication options:
 - Google OAuth login
 - Apple ID login
 
-![Login Screen](images/screenshot-login.png)
+![Login Screen](images/2.PNG)
 
 ### 3. Home Screen (Service & Specialist Selection)
 - Browse available services with pricing
 - View specialist profiles with ratings
 - Progress indicator for booking steps
 
-![Home Screen](images/screenshot-home.png)
+![Home Screen](images/3.PNG)
+
 
 ### 4. Date & Time Selection
 - Interactive calendar for date selection
 - Available time slots display
 - Service and specialist summary
 
-![Date & Time Screen](images/screenshot-datetime.png)
+![Date Time Screen](images/4.jpeg)
 
 ### 5. Confirmation Screen
 - Appointment confirmation message
 - Detailed booking summary
 - Reminders and calendar integration options
 
-![Confirmation Screen](images/screenshot-confirmation.png)
+![Confirmation Screen](images/5.jpeg)
 
 ## 🎨 Customization
 
