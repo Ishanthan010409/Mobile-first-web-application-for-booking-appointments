@@ -2,7 +2,6 @@
 
 A modern, mobile-first web application for booking appointments with service providers. Book appointments with your preferred specialists in just a few taps.
 
-![AppointmentEase Banner](https://img.shields.io/badge/AppointmentEase-Book%20Appointments-brightgreen?style=for-the-badge)
 
 ## ✨ Features
 
